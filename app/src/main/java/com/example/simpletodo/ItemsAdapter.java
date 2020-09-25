@@ -1,5 +1,6 @@
 package com.example.simpletodo;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,6 +47,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
         // Bind the item into the specified view holder
         holder.bind(item);
 
+
     }
 
     // Tells the Rv how many items in the list
@@ -66,6 +68,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
         //update the view inside the view holder with this data
         public void bind(String item) {
             tvItem.setText(item);
+            tvItem.setTextColor(Color.parseColor("#6200EE"));
             tvItem.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
